@@ -1,24 +1,34 @@
 import Typewriter from 'typewriter-effect';
 import Image from 'next/image';
-import webdev from './webdev.png'
-
-
+import webdev from './webdev.png';
+import styles from '../../styles/Page.module.css'
 
 export default function Body () {
 return (
-        <div>
-            <div className='grid justify-items-start flex align-middle my-8 .py-5'>
-            <p className="text-5xl ">I am  <strong> ALI-ASIF </strong> <br/> I am a </p>
+        <div className='flex justify-between mt-28'>
+            <div className='grid justify-items-start py-12 pl-20'>
+            <p className="text-5xl ">I am  <strong> ALI-ASIF </strong> <br className='whitespace-pre-line'/> I am a </p>
+            <p className='text-5xl text-blue-700 font-bold'>
             <Typewriter 
             options={{
-                strings: ['Web Developer', 'React-Native Developer', 'Mern Stack'],
+                strings: ['Web Developer', 'React-Native Developer', 'Mern-Stack'],
                 autoStart: true,
                 loop: true,
                 }}
             />
+            </p> 
+            <div className='py-6'>  
+            <a  className = {styles.button} href='https://www.fiverr.com/s/bGx0lP'>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                Hire me
+            </a>
             </div>
-            <div className='grid justify-items-end'>
-                <Image className='animate-bounce  '  src={webdev} alt="" height={700} width={700} />
+            </div>
+            <div className='flex-end '>
+                <Image className='animate-bounce  '  src={webdev} alt="" height={600} width={600} />
             </div>
         </div>
         
