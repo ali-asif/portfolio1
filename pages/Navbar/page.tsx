@@ -1,4 +1,6 @@
 import { ColorModeSwitcher } from '../theme'
+import Image  from 'next/image'
+import logo from './logo.jpg'
 
 // import  Body  from '../body/page';
 // import { background } from '@chakra-ui/react';
@@ -8,12 +10,12 @@ import { ColorModeSwitcher } from '../theme'
 export default function Navbar() {
 
   return (
-      <header style={{color: 'black'}} className="flex flex-wrap sm:justify-start sm:flex-nowrap z-50 w-full bg-red text-sm py-4 dark:bg-gray-800">
-        <nav style={{background: 'black'}} className="max-w-[85rem] w-full mx-auto px-4 sm:flex sm:items-center sm:justify-between" aria-label="Global">
-        <img className ="inline-block h-8 w-8 rounded-full ring-2 ring-white dark:ring-gray-800" src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80" alt="Image Description" />
-        <div className="flex items-center justify-between">
-          <p>---</p>
-          <a  style={{color: 'white'}} className="inline-flex items-center gap-x-2 text-xl font-bold dark:text-white" href="#">
+      <header className="flex items-center flex-wrap sm:justify-start sm:flex-nowrap  z-50  bg-red text-sm pb-4 dark:bg-gray-800">
+        <nav style={{background: 'black'}} className="w-screen h-[8vh] py-10 sm:flex sm:items-center sm:justify-between" aria-label="Global">
+        <div className="w-full flex items-center justify-between">
+        <Image className =" inline-block h-8 w-8 rounded-full ring-2 ring-white dark:ring-gray-800" src={logo} alt="Image Description" />
+          {/* <p>---</p>  */}
+          <a  style={{color: 'white'}} className=" inline-flex items-center gap-x-2.5 text-xl font-bold dark:text-white" href="#">
             Portfolio
           </a>
         <div className="sm:hidden">
@@ -30,7 +32,6 @@ export default function Navbar() {
         <div id="navbar-image-and-text-1" className="hs-collapse hidden overflow-hidden transition-all duration-300 basis-full grow sm:block">
         <div className="flex flex-col gap-5 mt-5 sm:flex-row sm:items-center sm:justify-end sm:mt-0 sm:pl-5">
         <a className="font-medium text-blue-500" href="#" aria-current="page">Home</a>
-        <a className="font-medium text-gray-600 hover:text-gray-400 dark:text-gray-400 dark:hover:text-gray-500" href="#">About me</a>
         <ColorModeSwitcher />
       </div>
       </div>
