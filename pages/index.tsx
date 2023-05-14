@@ -11,11 +11,13 @@ import Footer from "./footer/page";
 export default function Home() {
 
   return (
+  <div className="flex flex-col">
   <body>
   <Navbar />
   <Body />
   <Button />
   <Footer />
   </body>
+  </div>
   )
 }
