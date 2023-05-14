@@ -16,7 +16,8 @@ import {
     const SwitchIcon = useColorModeValue(FaMoon, FaSun)
   
     return (
-      <IconButton
+        <div>
+        <IconButton
         size="md"
         fontSize="lg"
         variant="ghost"
@@ -27,5 +28,6 @@ import {
         aria-label={`Switch to ${text} mode`}
         {...props}
       />
+      </div>
     )
   }

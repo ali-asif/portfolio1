@@ -2,19 +2,16 @@ import { ColorModeSwitcher } from '../theme'
 import Image  from 'next/image'
 import logo from './logo.jpg'
 
-// import  Body  from '../body/page';
-// import { background } from '@chakra-ui/react';
-// import { color } from 'framer-motion';
-
 
 export default function Navbar() {
 
   return (
+    <div>
       <header className="flex items-center flex-wrap sm:justify-start sm:flex-nowrap  z-50  bg-red text-sm pb-4 dark:bg-gray-800">
-        <nav style={{background: 'black'}} className="w-screen h-[8vh] py-10 sm:flex sm:items-center sm:justify-between" aria-label="Global">
+        <nav style={{background: 'black'}} className="w-screen h-[8vh] py-10  sm:flex sm:items-center sm:justify-between" aria-label="Global">
         <div className="w-full flex items-center justify-between">
-        <Image className =" inline-block h-8 w-8 rounded-full ring-2 ring-white dark:ring-gray-800" src={logo} alt="Image Description" />
-          {/* <p>---</p>  */}
+        <Image className =" inline-block h-8 w-8 rounded-full ring-1 ring-white dark:ring-gray-800 " src={logo} alt="Image Description" />
+
           <a  style={{color: 'white'}} className=" inline-flex items-center gap-x-2.5 text-xl font-bold dark:text-white" href="#">
             Portfolio
           </a>
@@ -31,11 +28,13 @@ export default function Navbar() {
       </div>
         <div id="navbar-image-and-text-1" className="hs-collapse hidden overflow-hidden transition-all duration-300 basis-full grow sm:block">
         <div className="flex flex-col gap-5 mt-5 sm:flex-row sm:items-center sm:justify-end sm:mt-0 sm:pl-5">
-        <a className="font-medium text-blue-500" href="#" aria-current="page">Home</a>
+        <a className="font-medium text-emerald-500" href="#" aria-current="page">Home</a>
         <ColorModeSwitcher />
       </div>
       </div>
     </nav>
-   </header>
+    </header>
+  </div>
   )
+
 }

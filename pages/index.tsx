@@ -1,5 +1,4 @@
-// import { ColorModeSwitcher } from './theme'
-// import  Body  from './body/page';
+
 
 import Navbar from "./Navbar/page";
 import Body from "./body/page";
@@ -12,7 +11,7 @@ export default function Home() {
 
   return (
   <div className="flex flex-col">
-  <body>
+  <body className="flex flex-col justify-between h-screen">
   <Navbar />
   <Body />
   <Button />
