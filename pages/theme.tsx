@@ -10,7 +10,7 @@ import {
   
   type ColorModeSwitcherProps = Omit<IconButtonProps, "aria-label">
   
-  export const ColorModeSwitcher = (props: ColorModeSwitcherProps) => {
+    export const ColorModeSwitcher = (props: ColorModeSwitcherProps) => {
     const { toggleColorMode } = useColorMode()
     const text = useColorModeValue("dark", "light")
     const SwitchIcon = useColorModeValue(FaMoon, FaSun)
@@ -31,3 +31,4 @@ import {
       </div>
     )
   }
+  export default ColorModeSwitcher;
